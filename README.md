@@ -136,4 +136,4 @@ MIT License — see **[LICENSE](LICENSE)**.
 
 **Last Updated:** July 2026
 **Contributors:** 1 (growing!)
-# Awesome-BCI-Neuromorphic-Engineer-Interview-QA
+
