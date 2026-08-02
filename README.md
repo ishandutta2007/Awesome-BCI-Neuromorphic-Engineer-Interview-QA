@@ -1,20 +1,24 @@
-# Awesome BCI Neuromorphic Engineer Interview Q&A
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome BCI Neuromorphic Engineer Interview Q&A Banner" width="100%">
+</p>
+
+# 🧠 Awesome BCI Neuromorphic Engineer Interview Q&A ⚡
 
 A comprehensive, community-curated collection of **185+ interview questions and answers** for **Brain-Computer Interface (BCI) Neuromorphic Engineer** roles — professionals who design hardware and software systems at the intersection of brain-computer interfaces and neuromorphic computing, building silicon neural processing architectures that interface with biological neural signals, implementing spike-based neural decoding on energy-efficient neuromorphic chips, and engineering the edge-computing layer that makes implantable and wearable BCIs practical for clinical and consumer deployment.
 
-## 📌 Overview
+## 📌 Overview 🔍
 
 **BCI Neuromorphic Engineers** combine deep BCI system engineering (electrode arrays, neural signal acquisition, real-time decoding) with neuromorphic computing hardware expertise (spiking neural networks, event-driven processing, silicon neuron architectures), building the next generation of low-power, high-performance neural interfaces that process brain signals on-chip rather than streaming raw data to external processors — enabling untethered, battery-powered implantable BCIs, wearable neural monitoring, and closed-loop neuromodulation with sub-millisecond latency.
 
 This repository covers:
-- ✅ Neuromorphic computing architectures and spiking neural networks (SNNs)
-- ✅ Neural signal processing on neuromorphic hardware
-- ✅ BCI system architecture — implantable, wearable, and high-density arrays
-- ✅ Spike encoding and neural-to-neuromorphic signal translation
-- ✅ SNN training and deployment for neural decoding tasks
-- ✅ On-chip learning and adaptation for chronic BCI stability
-- ✅ Power, area, and latency co-optimization for implantable constraints
-- ✅ Safety, biocompatibility, and regulatory engineering for implantable BCIs
+- 🧠 Neuromorphic computing architectures and spiking neural networks (SNNs)
+- 🔌 Neural signal processing on neuromorphic hardware
+- 🧬 BCI system architecture — implantable, wearable, and high-density arrays
+- ⚡ Spike encoding and neural-to-neuromorphic signal translation
+- 🤖 SNN training and deployment for neural decoding tasks
+- 🔄 On-chip learning and adaptation for chronic BCI stability
+- 🔋 Power, area, and latency co-optimization for implantable constraints
+- 🛡️ Safety, biocompatibility, and regulatory engineering for implantable BCIs
 
 **Estimated preparation time:** 30–50 hours
 **Interview duration:** Typically 4–6 rounds (3–5 hours), often including a hardware architecture design round, an SNN/algorithm coding round, and a system-level design discussion

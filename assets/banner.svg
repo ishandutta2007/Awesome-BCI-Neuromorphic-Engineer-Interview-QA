@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%" height="250">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#181024" />
+    </linearGradient>
+
+    <!-- Glowing effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradients for lines and accents -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7f00ff" />
+      <stop offset="100%" stop-color="#e100ff" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    /* Keyframe Animations */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.15); }
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.5)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.9)); }
+    }
+    @keyframes dashOffset {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Animation Classes */
+    .bg-grid {
+      stroke: #1e293b;
+      stroke-width: 1;
+      opacity: 0.35;
+    }
+    .node {
+      transform-origin: center;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .node-delay-1 { animation-delay: 0.75s; }
+    .node-delay-2 { animation-delay: 1.5s; }
+    .node-delay-3 { animation-delay: 2.25s; }
+
+    .pulse-glow {
+      animation: glowPulse 4s infinite ease-in-out;
+    }
+
+    .moving-signal {
+      stroke-dasharray: 8 12;
+      animation: dashOffset 2s linear infinite;
+    }
+    .moving-signal-fast {
+      stroke-dasharray: 6 14;
+      animation: dashOffset 1.2s linear infinite;
+    }
+    
+    .floating-text {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g class="bg-grid">
+    <path d="M 0,25 L 800,25 M 0,50 L 800,50 M 0,75 L 800,75 M 0,100 L 800,100 M 0,125 L 800,125 M 0,150 L 800,150 M 0,175 L 800,175 M 0,200 L 800,200 M 0,225 L 800,225" />
+    <path d="M 25,0 L 25,250 M 50,0 L 50,250 M 75,0 L 75,250 M 100,0 L 100,250 M 125,0 L 125,250 M 150,0 L 150,250 M 175,0 L 175,250 M 200,0 L 200,250 M 225,0 L 225,250 M 250,0 L 250,250 M 275,0 L 275,250 M 300,0 L 300,250 M 325,0 L 325,250 M 350,0 L 350,250 M 375,0 L 375,250 M 400,0 L 400,250 M 425,0 L 425,250 M 450,0 L 450,250 M 475,0 L 475,250 M 500,0 L 500,250 M 525,0 L 525,250 M 550,0 L 550,250 M 575,0 L 575,250 M 600,0 L 600,250 M 625,0 L 625,250 M 650,0 L 650,250 M 675,0 L 675,250 M 700,0 L 700,250 M 725,0 L 725,250 M 750,0 L 750,250 M 775,0 L 775,250" />
+  </g>
+
+  <!-- Left: Brain / Neural Network Nodes & Connections -->
+  <g id="neuralNet" transform="translate(10, 0)">
+    <!-- Connections -->
+    <path d="M 60,80 L 100,50 L 140,70 L 110,130 L 60,80" fill="none" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 100,50 L 170,90 L 140,70" fill="none" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 110,130 L 70,170 L 130,190 L 180,140 L 110,130" fill="none" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 140,70 L 180,140" fill="none" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 180,140 L 230,100" fill="none" stroke="#1e293b" stroke-width="1.5" />
+    <path d="M 170,90 L 230,100" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Brain Outline overlay in background -->
+    <path d="M 40,120 C 40,70 80,40 130,40 C 170,40 200,65 210,95 C 230,95 245,115 245,135 C 245,160 220,185 190,195 C 170,210 130,215 110,200 C 70,200 40,170 40,120 Z" 
+          fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.3" />
+
+    <!-- Animated spikes traveling towards the chip (right side) -->
+    <path d="M 180,140 Q 300,210 450,170 T 580,125" fill="none" stroke="url(#lineGrad)" stroke-dasharray="100 500" stroke-width="2.5" class="moving-signal-fast" filter="url(#glow)" />
+    <path d="M 230,100 Q 350,60 480,100 T 600,120" fill="none" stroke="url(#lineGrad)" stroke-dasharray="80 400" stroke-width="2" class="moving-signal" filter="url(#glow)" />
+    
+    <!-- More structural axons -->
+    <path d="M 110,130 Q 300,150 580,125" fill="none" stroke="#0ea5e9" stroke-width="0.75" opacity="0.4" />
+    <path d="M 140,70 Q 350,40 600,120" fill="none" stroke="#0ea5e9" stroke-width="0.75" opacity="0.4" />
+
+    <!-- Nodes -->
+    <circle cx="60" cy="80" r="4" fill="#00f2fe" class="node node-delay-1" filter="url(#glow)" />
+    <circle cx="100" cy="50" r="5" fill="#38bdf8" class="node" filter="url(#glow)" />
+    <circle cx="140" cy="70" r="4.5" fill="#0ea5e9" class="node node-delay-3" />
+    <circle cx="110" cy="130" r="6" fill="#00f2fe" class="node node-delay-2" filter="url(#glow)" />
+    <circle cx="70" cy="170" r="4" fill="#38bdf8" class="node node-delay-1" />
+    <circle cx="130" cy="190" r="5" fill="#0ea5e9" class="node" />
+    <circle cx="180" cy="140" r="6.5" fill="#00f2fe" class="node node-delay-3" filter="url(#glow)" />
+    <circle cx="170" cy="90" r="4" fill="#38bdf8" class="node node-delay-2" />
+    <circle cx="230" cy="100" r="5" fill="#00f2fe" class="node" filter="url(#glow)" />
+  </g>
+
+  <!-- Right: Neuromorphic Chip / Silicon Brain -->
+  <g id="neuroChip" transform="translate(480, 0)">
+    <!-- Outer boundary of the chip -->
+    <rect x="80" y="55" width="140" height="140" rx="10" fill="#111827" stroke="#4b5563" stroke-width="2" class="pulse-glow" />
+    
+    <!-- Chip Grid & Circuits -->
+    <g opacity="0.8">
+      <!-- Grid cores -->
+      <rect x="100" y="75" width="45" height="45" rx="4" fill="#1f2937" stroke="url(#chipGrad)" stroke-width="1.5" />
+      <rect x="155" y="75" width="45" height="45" rx="4" fill="#1f2937" stroke="url(#chipGrad)" stroke-width="1.5" />
+      <rect x="100" y="130" width="45" height="45" rx="4" fill="#1f2937" stroke="url(#chipGrad)" stroke-width="1.5" />
+      <rect x="155" y="130" width="45" height="45" rx="4" fill="#1f2937" stroke="url(#chipGrad)" stroke-width="1.5" />
+
+      <!-- Synapse dots / core interior -->
+      <circle cx="112" cy="87" r="2" fill="#e100ff" class="node node-delay-1" />
+      <circle cx="122" cy="87" r="2" fill="#7f00ff" class="node" />
+      <circle cx="132" cy="87" r="2" fill="#e100ff" class="node node-delay-3" />
+      <circle cx="112" cy="97" r="2" fill="#7f00ff" class="node node-delay-2" />
+      <circle cx="122" cy="97" r="3" fill="#e100ff" class="node" filter="url(#glow)" />
+      <circle cx="132" cy="97" r="2" fill="#7f00ff" class="node node-delay-1" />
+      <circle cx="112" cy="107" r="2" fill="#e100ff" class="node node-delay-3" />
+      <circle cx="122" cy="107" r="2" fill="#7f00ff" class="node node-delay-2" />
+      <circle cx="132" cy="107" r="2" fill="#e100ff" class="node" />
+
+      <circle cx="167" cy="87" r="2" fill="#e100ff" class="node node-delay-2" />
+      <circle cx="177" cy="87" r="2" fill="#7f00ff" class="node node-delay-1" />
+      <circle cx="187" cy="87" r="2" fill="#e100ff" class="node" />
+      <circle cx="167" cy="97" r="2" fill="#7f00ff" class="node node-delay-3" />
+      <circle cx="177" cy="97" r="3" fill="#e100ff" class="node node-delay-1" filter="url(#glow)" />
+      <circle cx="187" cy="97" r="2" fill="#7f00ff" class="node" />
+      <circle cx="167" cy="107" r="2" fill="#e100ff" class="node node-delay-2" />
+      <circle cx="177" cy="107" r="2" fill="#7f00ff" class="node" />
+      <circle cx="187" cy="107" r="2" fill="#e100ff" class="node node-delay-3" />
+
+      <!-- Bottom cores -->
+      <circle cx="122" cy="152" r="3" fill="#e100ff" class="node node-delay-2" filter="url(#glow)" />
+      <circle cx="177" cy="152" r="3" fill="#e100ff" class="node node-delay-3" filter="url(#glow)" />
+    </g>
+
+    <!-- Pins / Connections extending from the chip -->
+    <path d="M 80,80 L 60,80 M 80,105 L 60,105 M 80,130 L 60,130 M 80,155 L 60,155 M 80,170 L 60,170" stroke="#4b5563" stroke-width="2" />
+    <path d="M 220,80 L 240,80 M 220,105 L 240,105 M 220,130 L 240,130 M 220,155 L 240,155 M 220,170 L 240,170" stroke="#4b5563" stroke-width="2" />
+    <path d="M 115,55 L 115,35 M 150,55 L 150,35 M 185,55 L 185,35" stroke="#4b5563" stroke-width="2" />
+    <path d="M 115,195 L 115,215 M 150,195 L 150,215 M 185,195 L 185,215" stroke="#4b5563" stroke-width="2" />
+  </g>
+
+  <!-- Center Text / Repository Branding -->
+  <g transform="translate(400, 125)" text-anchor="middle" class="floating-text">
+    <!-- Main Title -->
+    <text y="-15" font-family="'Outfit', 'Inter', sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="1">
+      AWESOME BCI
+    </text>
+    
+    <!-- Subtitle -->
+    <text y="15" font-family="'Outfit', 'Inter', sans-serif" font-size="14" font-weight="600" fill="#38bdf8" letter-spacing="2">
+      NEUROMORPHIC ENGINEER
+    </text>
+
+    <!-- Badge / Q&A -->
+    <rect x="-80" y="32" width="160" height="24" rx="12" fill="#1e1b4b" stroke="#7f00ff" stroke-width="1.5" />
+    <text y="48" font-family="'Outfit', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#e100ff" letter-spacing="1">
+      INTERVIEW Q&amp;A
+    </text>
+  </g>
+</svg>
